@@ -1,16 +1,8 @@
-import AppProvider from 'hooks';
-import { AppProps } from 'next/app';
-import { GlobalStyles } from 'styles';
+import type { NextPage } from 'next';
+import FeedTemplate from '../template/Feed';
 
-function MyApp({ Component, pageProps }: AppProps) {
-    return (
-        <>
-            <AppProvider>
-                <GlobalStyles />
-                <Component {...pageProps} />
-            </AppProvider>
-        </>
-    );
-}
+const Home: NextPage = () => {
+    return <FeedTemplate />;
+};
 
-export default MyApp;
+export default Home;
