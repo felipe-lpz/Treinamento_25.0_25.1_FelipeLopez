@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { defaultTheme } from '../../styles/default.theme';
 
 export const Container = styled.div`
     display: flex;
@@ -13,7 +14,7 @@ export const Container = styled.div`
 
     &:focus-within {
         background-color: #000;
-        box-shadow: 0 0 0 1px ${({ theme }) => theme.colors.indigo9};
+        box-shadow: 0 0 0 1px ${defaultTheme.colors.sky9};
     }
 `;
 
@@ -38,7 +39,7 @@ export const Input = styled.input`
 export const ClearButton = styled.button`
     background: none;
     border: none;
-    color: ${({ theme }) => theme.colors.indigo9};
+    color: ${defaultTheme.colors.sky9};
     cursor: pointer;
     padding: 0;
     font-size: 0.8rem;
@@ -48,6 +49,6 @@ export const ClearButton = styled.button`
     margin-left: 8px;
 
     &:hover {
-        color: ${({ theme }) => theme.colors.indigo10};
+        color: ${defaultTheme.colors.sky10};
     }
 `;

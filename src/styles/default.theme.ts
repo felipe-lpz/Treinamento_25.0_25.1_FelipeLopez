@@ -27,6 +27,7 @@ export const defaultTheme = {
         slate12: 'hsl(210, 6.0%, 93.0%)',
 
         white: '#FFFFFF',
+        red: '#FF0000',
 
         onSurface: {
             lowEmphasis: '#949494',

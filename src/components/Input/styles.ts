@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { defaultTheme } from '../../styles/default.theme';
 
 interface InputProps {
     hasError?: boolean;
@@ -7,34 +8,34 @@ interface InputProps {
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    margin-bottom: ${({ theme }) => theme.space[4]}px;
+    margin-bottom: ${defaultTheme.space[4]}px;
 `;
 
 export const Label = styled.label`
-    color: ${({ theme }) => theme.colors.slate12};
-    font-size: ${({ theme }) => theme.fontSizes.sm};
-    margin-bottom: ${({ theme }) => theme.space[1]}px;
+    color: ${defaultTheme.colors.slate12};
+    font-size: ${defaultTheme.fontSizes[2]};
+    margin-bottom: ${defaultTheme.space[1]}px;
 `;
 
 export const Input = styled.input<InputProps>`
-    background-color: ${({ theme }) => theme.colors.slate6};
+    background-color: ${defaultTheme.colors.slate6};
     border: 1px solid
         ${({ theme, hasError }) =>
             hasError ? theme.colors.red : theme.colors.slate8};
-    border-radius: ${({ theme }) => theme.radii.sm}px;
-    color: ${({ theme }) => theme.colors.slate12};
-    font-size: ${({ theme }) => theme.fontSizes.md};
-    padding: ${({ theme }) => `${theme.space[2]}px ${theme.space[3]}px`};
+    border-radius: ${defaultTheme.radii.sm}px;
+    color: ${defaultTheme.colors.slate12};
+    font-size: ${defaultTheme.fontSizes[2]};
+    padding: ${defaultTheme.space[1]}px ${defaultTheme.space[1]}px;
     outline: none;
     transition: all 0.2s ease;
 
     &::placeholder {
-        color: ${({ theme }) => theme.colors.slate10};
+        color: ${defaultTheme.colors.slate10};
     }
 
     &:focus {
-        border-color: ${({ theme }) => theme.colors.indigo9};
-        box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.indigo9}33;
+        border-color: ${defaultTheme.colors.sky9};
+        box-shadow: 0 0 0 2px ${defaultTheme.colors.sky9}33;
     }
 
     &:disabled {
@@ -44,7 +45,7 @@ export const Input = styled.input<InputProps>`
 `;
 
 export const ErrorMessage = styled.span`
-    color: ${({ theme }) => theme.colors.red};
-    font-size: ${({ theme }) => theme.fontSizes.xs};
-    margin-top: ${({ theme }) => theme.space[1]}px;
+    color: ${defaultTheme.colors.red}
+    font-size: ${defaultTheme.fontSizes[1]};
+    margin-top: ${defaultTheme.space[1]}px;
 `;

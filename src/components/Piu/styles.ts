@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { defaultTheme } from '../../styles/default.theme';
 
 export const Container = styled.div`
     display: flex;
@@ -84,7 +85,7 @@ export const ActionButton = styled.button`
     transition: color 0.2s ease;
 
     &:hover {
-        color: ${({ theme }) => theme.colors.indigo9};
+        color: ${defaultTheme.colors.sky9};
     }
 `;
 

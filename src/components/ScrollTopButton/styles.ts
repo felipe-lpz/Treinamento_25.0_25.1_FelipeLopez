@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { defaultTheme } from '../../styles/default.theme';
 
 interface ButtonProps {
     $isVisible: boolean;
@@ -11,8 +12,8 @@ export const Button = styled.button<ButtonProps>`
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.indigo9};
-    color: ${({ theme }) => theme.colors.white};
+    background-color: ${defaultTheme.colors.sky9};
+    color: ${defaultTheme.colors.white};
     border: none;
     font-size: 1.5rem;
     display: flex;
@@ -26,7 +27,7 @@ export const Button = styled.button<ButtonProps>`
     transform: ${({ $isVisible }) => ($isVisible ? 'scale(1)' : 'scale(0.8)')};
 
     &:hover {
-        background-color: ${({ theme }) => theme.colors.indigo10};
+        background-color: ${defaultTheme.colors.sky10};
         transform: ${({ $isVisible }) =>
             $isVisible ? 'scale(1.1)' : 'scale(0.8)'};
     }

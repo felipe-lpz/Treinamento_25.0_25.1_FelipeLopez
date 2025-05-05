@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { defaultTheme } from '../../styles/default.theme';
 
 interface ContainerProps {
     $isOpen: boolean;
@@ -92,7 +93,7 @@ export const MenuLabel = styled.span`
 `;
 
 export const PiuButton = styled.button`
-    background-color: ${({ theme }) => theme.colors.indigo9};
+    background-color: ${defaultTheme.colors.sky9};
     color: white;
     border: none;
     border-radius: 28px;
@@ -104,6 +105,6 @@ export const PiuButton = styled.button`
     transition: background-color 0.2s ease;
 
     &:hover {
-        background-color: ${({ theme }) => theme.colors.indigo10};
+        background-color: ${defaultTheme.colors.sky10};
     }
 `;
